@@ -1,0 +1,26 @@
+﻿@using CoreCampBlog.Controllers
+@model List<Class1>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Adı Soyadı</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <th>@item.Id</th>
+                    <th>@item.Name</th>
+                    <th><a href="#" class="btn btn-outline-danger">Sil</a></th>
+                    <th><a href="#" class="btn btn-outline-warning">Düzenle</a></th>
+                    <th>@item.Name</th>
+                </tr>
+            }
+</table>
+<a href="/EmployeeTest/AddEmployee/" class="btn btn-outline-info">Ekle</a>
